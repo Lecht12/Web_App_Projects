@@ -1,0 +1,155 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+/*body container*/
+.body_section
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 220px);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    height: fit-content;
+    background-color:#f0f1f6 ;
+}
+
+/*mainbody of the body container*/
+
+.s_container
+{
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 10vh 10vh auto;
+    grid-gap: 10px;
+    background-color: #f0f1f6;
+    overflow-x: hidden;
+}
+
+/* haeder of the body main*/
+.s_header
+{
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.s_header h1{
+    color: #242e42;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 350;
+    letter-spacing: .1rem;
+    margin-left: 20px;
+}
+
+/*main body divs*/
+
+.s_container div
+{
+    width: 100%;
+    background-color: white;
+    margin: 0px 10px 0px 10px;
+}
+
+/*body of main body /table container*/
+
+.s_body
+{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 85% 40px ;
+    grid-gap: 5px;
+    background-color: transparent !important;
+}
+
+/*body of main body divs*/
+
+.s_body div
+{
+    border-radius: 3px;
+}
+
+/*data table*/
+
+.s_table
+{
+    overflow-y:scroll ;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+
+}
+.s_table table
+{
+    margin-top: 10px;
+    width: 99%;
+    height: fit-content;
+    background-color: #c2c5cf;
+}
+.table_header
+{
+    background-color: #3d5585;
+    border:2px solid #c2c5cf;
+}
+.table_header th
+{
+    color: white !important;
+    font-weight: 400; 
+}
+.table_header th::first-letter
+{
+    text-transform: uppercase;
+}
+.s_table table th, td {
+    text-align: center;
+    padding: 8px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    color: #242e42;
+    font-weight: 400;
+  }
+.s_table table tr:nth-child(even) {background-color: #f2f2f2;}
+#des
+{
+    width: 300px;
+}
+.s_table table tr td:first-child
+{
+    text-align: left !important;
+}
+
+/*operations__ on table*/
+
+.operations_
+{
+    width: fit-content;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.operations_ span    
+{
+    color: #3d5585;
+    font-size: 30px;
+    font-weight: 200;
+    margin: 0px 10px 0px 10px;
+}
+.operations_ span:hover
+{
+    background-color: #f0f1f6;
+    color: #3d5585;
+    cursor: pointer;
+}
+@media screen and ( max-width:800px  )
+{
+    .body_section
+    {
+        right: 0;
+        width: calc(100% - 80px ) !important;
+    }
+}

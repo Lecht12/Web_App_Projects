@@ -1,0 +1,177 @@
+/* RESET RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*body section*/
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+
+:root {
+  --page-header-bgColor: #242e42;
+  --page-header-bgColor-hover: #1d2636;
+  --page-header-txtColor: #dde9f8;
+  --page-header-headingColor: #7889a4;
+  --page-header-width: 220px;
+  --page-content-bgColor: #f0f1f6;
+  --page-content-txtColor: #171616;
+  --page-content-blockColor: #fff;
+  --white: #fff;
+  --black: #333;
+  --blue: #00b9eb;
+  --red: #ec1848;
+  --border-radius: 4px;
+  --box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.075);
+  --switch-bgLightModeColor: #87cefa;
+  --switch-sunColor: gold;
+  --switch-moonColor: #f4f4f4;
+  --switch-bgDarkModeColor: #1f1f27;
+}
+*
+{
+    padding: 0;
+    margin: 0;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.body_section
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(100% - 220px);
+    height:fit-content;
+    background-color: var(--page-content-bgColor);
+    display: grid;
+    grid-template-areas: "a a a a"" b b b b" "c c c c";
+    grid-template-rows: 80px 110px auto;
+    grid-gap: 10px;
+}
+.body_header
+{
+    margin: 5px 5px 0px 5px;
+    grid-area: a;
+    background-color: transparent;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.search_area input[type="search"]
+{
+    width: 600px;
+    height: 35px;
+    background-color: white;
+    outline: none;
+    border: 1px solid rgb(189, 182, 182);
+}
+.search_area input[type="submit"]
+{
+    border: none;
+    height: 35px;
+    width: 120px;
+    color: white;
+    background-color:#406d9c;
+    cursor: pointer;
+}
+.admin
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
+}
+.admin_pc
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+.admin img
+{
+    width: 50px;
+}
+#infos_bar
+{
+    grid-area: b;
+    background-color: transparent;
+    margin: 5px 10px 0px 10px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+#infos_bar div
+{
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#infos_bar div span
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    color: #7889a4;
+}
+#infos_bar div div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#infos_bar div div i
+{
+    font-size: 30px;
+    color: #406d9c;
+}
+#infos_bar div div h2
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: #406d9c;
+}
+.graph
+{
+    grid-area: c;
+    background-color:transparent;
+    margin: 0px 10px 0px 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+.graph div
+{
+    background-color: white;
+    border-radius: 3px;
+    overflow-y: hidden;
+    height: 300px;
+}
+@media screen and ( max-width:800px  )
+{
+    .body_section
+    {
+        width: calc(100% - 80px ) !important;
+        grid-template-areas: "a a a a"" b b b b" "b b b b" "c c c c";
+    }
+    .search_area input[type="search"]
+    {
+        width: 200px;
+    }
+    .search_area input[type="submit"]
+    {
+        width: 80px;
+    }
+    #infos_bar
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

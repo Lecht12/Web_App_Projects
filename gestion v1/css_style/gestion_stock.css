@@ -1,0 +1,210 @@
+body
+{
+    background-color: #f0f1f6;
+}
+*
+{
+    padding: 0;
+    margin-top: 0;
+}
+
+/*body container*/
+
+.body_container
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(100% - 220px);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 10vh 15vh auto;
+    grid-gap: 10px;
+    height: fit-content;
+    background-color: #f0f1f6;
+}
+.body_container div
+{
+    background-color: white;
+    margin: 10px 10px 0px 10px;
+}
+
+/*main body container*/
+.header_g
+{
+    margin-left: 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.body_g
+{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 70% auto 50px auto;
+    grid-gap: 10px;
+    background-color: transparent !important;
+}
+
+/*table container*/
+
+.table_g
+{
+    overflow-y:scroll ;
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+/*tyble styling*/
+.table_g table
+{
+    margin-top: 10px;
+    width: 99%;
+    height: fit-content;
+    background-color: #c2c5cf;
+}
+.table_g_header
+{
+    background-color: #3d5585;
+    border:2px solid #c2c5cf;
+}
+.table_g_header th
+{
+    color: white !important;
+    font-weight: 400; 
+}
+.table_g_header th::first-letter
+{
+    text-transform: uppercase;
+}
+.table_g table th, td {
+    text-align: center;
+    padding: 8px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    color: #242e42;
+    font-weight: 400;
+  }
+.table_g table tr:nth-child(even) {background-color: #f2f2f2;}
+#des
+{
+    width: 300px;
+}
+.table_g table tr td:first-child
+{
+    text-align: left !important;
+}
+
+/*form styling*/
+.operations_g
+{
+    position:absolute;
+    display: none;
+    width: 40%;
+    height: 50%;
+    left: 30%;
+    border-radius: 3px;
+    top: 5px;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column;
+    border: 1px solid #242e42;
+}
+.operations_g h1,.hidden_g h1,.body_container div h1
+{
+    color: #242e42;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 350;
+    letter-spacing: .1rem;
+    margin-left: 10px;
+}
+.operations_g form,
+.operations_g form
+ div
+{
+    margin: 10px 0px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.operations_g form input:not(input[type="submit"]),.hidden_g form input:not(input[type="submit"])
+{
+    width: 300px;
+    height: 35px;
+    border: 1px solid #c2c5cf;
+    background-color: #f0f1f6;
+    outline: none;
+    margin: 5px;
+
+}
+.operations_g form input[type="submit"],.hidden_g form input[type="submit"]
+{
+    width: 300px;
+    height: 35px;
+    border: 1px solid #c2c5cf;
+    background-color: #242e42;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+}
+.hidden_g form select
+{
+    width: 300px;
+    height: 35px;
+    outline: none;
+}
+.hidden_g
+{
+    margin-bottom: 0px;
+    display: none;
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    left: 30%;
+    border-radius: 3px;
+    top: 5px;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column;
+    border: 1px solid #242e42;
+}
+.hidden_g h1
+{    
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hidden_g form
+{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    height:100%;
+}
+.hidden_g form div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*downlaod excel file*/
+.fa-file-excel
+{
+    font-size: 20px;
+    margin: 10px;
+    border-bottom:1px solid blue ;
+}
+@media screen and ( max-width:800px  )
+{
+    section
+    {
+        width: calc(100% - 80px ) !important;
+    }
+}
