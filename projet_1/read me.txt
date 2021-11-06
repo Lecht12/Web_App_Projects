@@ -1,0 +1,30 @@
+in case you had problems with the database i amde this file that may help .
+
+******************************************************************
+	server name : localhost:3309 	(Edit in data_processing.php)
+******************************************************************
+
+	data base name : hotel
+	table name : chambre
+
+	1 column's name : code_ch
+	2 column's name : nombre_lit
+	3 column's name : prix
+
+	code sql :
+--------------#creat database:
+ 
+	CREATE DATABASE hotel
+
+------------#create table:
+
+	CREATE  TABLE chambre 
+	(
+		code_ch  int(3) primary key not null,
+		nombre_lit  int(3) not null,
+		prix  int(4) not null
+	)
+
+
+
+
